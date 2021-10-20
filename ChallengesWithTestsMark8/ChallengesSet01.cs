@@ -37,7 +37,7 @@ namespace ChallengesWithTestsMark8
 
         public long Multiply(long factor1, long factor2)
         {
-            throw new NotImplementedException();
+            return fact
         }
 
         public string GetGreeting(string nameOfPerson)
