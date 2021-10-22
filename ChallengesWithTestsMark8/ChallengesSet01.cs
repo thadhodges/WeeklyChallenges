@@ -37,17 +37,29 @@ namespace ChallengesWithTestsMark8
 
         public long Multiply(long factor1, long factor2)
         {
-            return fact
+            return factor1 * factor2;
         }
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            if (nameOfPerson == "")
+            {
+                return "Hello!";
+            }
+            else 
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
+            
+           
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "HEY!";
         }
+
+
+       
     }
 }
