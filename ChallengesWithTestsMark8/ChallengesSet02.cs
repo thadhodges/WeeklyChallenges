@@ -89,14 +89,27 @@ namespace ChallengesWithTestsMark8
 
 
         }
-        
-    public int SumEvens(int[] numbers)
-        {
-            throw new NotImplementedException();
-        }
 
+        public int SumEvens(int[] numbers)
+        {
+            int evenSum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    evenSum += numbers[i];
+                    return evenSum;
+                }
+                else
+                {
+                    return 0;
+                }
+
+            }
+        }
         public bool IsSumOdd(List<int> numbers)
         {
+
             throw new NotImplementedException();
         }
 
