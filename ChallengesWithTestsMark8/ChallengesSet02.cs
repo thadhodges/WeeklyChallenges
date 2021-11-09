@@ -13,7 +13,7 @@ namespace ChallengesWithTestsMark8
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            if(vals.Length % 2 == 0)
+            if (vals.Length % 2 == 0)
             {
                 return true;
             }
@@ -49,22 +49,48 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
+            
+            
             throw new NotImplementedException();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            if (str1.Length > str2.Length)
+            {
+                return str2.Length;
+            }
+            else
+            {
+                return str1.Length;
+            }
         }
+
+        
+
+    
 
         public int Sum(int[] numbers)
-        {
-            var numbersLength = numbers.Length;
-            
-            int x = 
-        }
+        {   
+            if (numbers == null)
+            {
+                return 0;
+            }
+          
+            int sum = 0;
+            foreach (int num in numbers)
+            {
+                sum += num;            
+            }
 
-        public int SumEvens(int[] numbers)
+            return sum;
+
+
+
+
+        }
+        
+    public int SumEvens(int[] numbers)
         {
             throw new NotImplementedException();
         }
