@@ -53,19 +53,19 @@ namespace ChallengesWithTestsMark8
         {
             //List<int> wholeList = new List<int>();
             List<int> odds = new List<int>();
-            
+
             for (int i = 0; i < 100; i++)
             {
                 if (i % 2 != 0)
                 {
                     odds.Add(i);
-                    
+
                 }
 
-                
-                
+                return odds(i);
+
             }
-           
+            
 
             //throw new NotImplementedException();
         }
