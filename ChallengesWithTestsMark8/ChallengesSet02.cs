@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -50,8 +51,21 @@ namespace ChallengesWithTestsMark8
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
             
-            
-            throw new NotImplementedException();
+            List<double> mylist = numbers.ToList();
+            if (numbers == null || !numbers.Any());
+            {
+                return 0;
+            }
+
+            if (mylist.Count == 0)
+            {
+                return 0;
+            }
+            double x = mylist.Max();
+            double y = mylist.Min();
+            return x + y;
+
+            //throw new NotImplementedException();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -92,31 +106,76 @@ namespace ChallengesWithTestsMark8
 
         public int SumEvens(int[] numbers)
         {
-            ////Figure this out
-            int evenSum = 0;
-            for (int i = 0; i < numbers.Length; i++)
+            if (numbers == null)
             {
-                if (numbers[i] % 2 == 0)
-                {
-                    evenSum += numbers[i];
-                    return evenSum;
-                }
-                else
-                {
-                    return 0;
-                }
-
+                return 0;
             }
+            List<int> evens = new List<int>();
+            int sumevens = 0;
+            foreach (int x in numbers)
+            {
+                if (x % 2 == 0)
+                {
+                    evens.Add(x);
+                }
+            }
+            foreach (int y in evens)
+            {
+                sumevens += y;
+                
+            }
+            return sumevens;
         }
         public bool IsSumOdd(List<int> numbers)
         {
+            if (numbers == null)
+            {
+                return false;
+            }
+            int listSum = 0;
 
-            throw new NotImplementedException();
+            foreach (int x in numbers)
+            {
+                listSum += x;
+            }
+
+            if (listSum % 2 != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+          
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            //List<long> odds = new List<long>();
+
+            if (number <= 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return number / 2;
+            }
+
+            //for (int i = 1; i < number; i++)
+            //{
+            //    if (i % 2 != 0)
+            //    {
+            //        odds.Add(i);
+            //    }
+            //}
+
+            //return odds.Count;
+
+
+
         }
     }
 }

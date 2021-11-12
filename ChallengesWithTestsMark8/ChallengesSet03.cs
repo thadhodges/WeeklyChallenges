@@ -7,11 +7,13 @@ namespace ChallengesWithTestsMark8
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
+            
             throw new NotImplementedException();
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
+
             throw new NotImplementedException();
         }
 
@@ -22,11 +24,16 @@ namespace ChallengesWithTestsMark8
 
         public char GetFirstLetterOfString(string val)
         {
+            return val[0];
+
             throw new NotImplementedException();
         }
 
         public char GetLastLetterOfString(string val)
         {
+            int x = val.Length;
+            return val[x - 1];
+
             throw new NotImplementedException();
         }
 
@@ -37,12 +44,30 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
+            return nums[nums.Length - 1] - nums[0];
             throw new NotImplementedException();
         }
 
         public int[] GetOddsBelow100()
+
         {
-            throw new NotImplementedException();
+            //List<int> wholeList = new List<int>();
+            List<int> odds = new List<int>();
+            
+            for (int i = 0; i < 100; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    odds.Add(i);
+                    
+                }
+
+                
+                
+            }
+           
+
+            //throw new NotImplementedException();
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
