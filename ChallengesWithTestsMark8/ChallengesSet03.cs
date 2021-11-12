@@ -62,10 +62,13 @@ namespace ChallengesWithTestsMark8
 
                 }
 
-                return odds(i);
+                
 
             }
-            
+            foreach (int var in odds)
+            {
+                return var;            
+            }
 
             //throw new NotImplementedException();
         }
