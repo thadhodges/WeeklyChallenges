@@ -51,19 +51,18 @@ namespace ChallengesWithTestsMark8
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
             
-            List<double> mylist = numbers.ToList();
-            if (numbers == null || !numbers.Any());
+            
+            if (numbers == null)
             {
                 return 0;
             }
 
-            if (mylist.Count == 0)
+            if (numbers.Count() == 0)
             {
                 return 0;
             }
-            double x = mylist.Max();
-            double y = mylist.Min();
-            return x + y;
+            
+            return numbers.Min() + numbers.Max();
 
             //throw new NotImplementedException();
         }
@@ -81,8 +80,6 @@ namespace ChallengesWithTestsMark8
         }
 
         
-
-    
 
         public int Sum(int[] numbers)
         {   
