@@ -6,6 +6,19 @@ namespace ChallengesWithTestsMark8
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
+            int sumevens = 0;
+            int sumodds = 0;
+            foreach (int e in numbers)
+            {
+                if (e % 2 == 0)
+                {
+                    sumevens += e;
+                }
+                sumodds -= e;
+            }
+
+            return sumevens - sumodds;
+            
             throw new NotImplementedException();
         }
 

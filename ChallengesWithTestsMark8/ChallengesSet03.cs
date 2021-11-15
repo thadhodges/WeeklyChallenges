@@ -7,8 +7,23 @@ namespace ChallengesWithTestsMark8
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            
-            throw new NotImplementedException();
+            if (vals == null)
+            {
+                return false;
+            }
+            foreach (bool x in vals)
+            {
+                if (x == false)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            return false;
+            //throw new NotImplementedException();
+
+            ////How do you make a boolean return False and True with Capitalized first letter
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
@@ -22,12 +37,7 @@ namespace ChallengesWithTestsMark8
             throw new NotImplementedException();
         }
 
-        public char GetFirstLetterOfString(string val)
-        {
-            return val[0];
-
-            throw new NotImplementedException();
-        }
+        public char GetFirstLetterOfString(string val) => val[0];//throw new NotImplementedException();
 
         public char GetLastLetterOfString(string val)
         {
@@ -39,7 +49,13 @@ namespace ChallengesWithTestsMark8
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            decimal answer = dividend / divisor;
+            return answer;
+            
+            
+            
+            
+            //throw new NotImplementedException();
         }
 
         public int LastMinusFirst(int[] nums)
@@ -70,7 +86,7 @@ namespace ChallengesWithTestsMark8
                 return var;            
             }
 
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
