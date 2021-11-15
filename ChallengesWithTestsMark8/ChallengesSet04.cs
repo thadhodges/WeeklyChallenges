@@ -53,7 +53,24 @@ namespace ChallengesWithTestsMark8
         }
 
         public double AverageEvens(int[] numbers)
+            
         {
+            if (numbers == null)
+            {
+                return 0;
+            }
+
+            if (numbers.Length == 0)
+            {
+                return 0;
+            }
+            double sumevens = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sumevens += numbers[i];
+               
+            }
+            return sumevens / numbers.Length;
             throw new NotImplementedException();
         }
 
