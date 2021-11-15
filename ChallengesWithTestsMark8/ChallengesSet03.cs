@@ -63,12 +63,12 @@ namespace ChallengesWithTestsMark8
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            //for (int i = 0; i < password.Length; i++)
-            //{
-            //    if (password[i] == char.ToUpper());
-            //}
-            
-            throw new NotImplementedException();
+            if (password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsDigit))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public char GetFirstLetterOfString(string val) => val[0];//throw new NotImplementedException();
