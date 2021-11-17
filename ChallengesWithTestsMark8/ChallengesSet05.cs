@@ -7,6 +7,8 @@ namespace ChallengesWithTestsMark8
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
+            int answer, a, b;
+
             throw new NotImplementedException();
         }
 
