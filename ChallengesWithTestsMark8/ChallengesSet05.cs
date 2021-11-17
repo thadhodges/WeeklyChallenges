@@ -22,7 +22,21 @@ namespace ChallengesWithTestsMark8
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+            int sum = 0;
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                if (numbers[i] % 2 == 0 && i != numbers.Length)
+                {
+                    sum += numbers[i + 1];
+                }
+                
+            }
+            return sum;
+            //throw new NotImplementedException();
         }
 
         public string TurnWordsIntoSentence(string[] words)
@@ -32,7 +46,17 @@ namespace ChallengesWithTestsMark8
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
+            List<double> everyFourth = new List<double>();
+            for (int i = 3; i < elements.Count; i+=4)
+            {
+                everyFourth.Add(elements[i]);
+            }
+            if (everyFourth.ToArray() == null)
+            {
+                return everyFourth.ToArray;
+            }
+            return everyFourth.ToArray();
+            //throw new NotImplementedException();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
